@@ -31,16 +31,13 @@ const Menu = ({ list, setSelectedIndex, setSelectedLevel, setMaxLevel, setListLe
       <ul>
         {list.map((item, index) => {
           return (
-            <>
-              <li
-                key={index}
-                onMouseEnter={() => handleHover(level, index)}  
-                className={`${index === selectedIndexes[level] ? "selected" : ""} ${index === selectedIndex && selectedLevel === level ? "currentSelected" : ""}`}
-              >
-                {item.name}
-              </li>
-            </>
-
+            <li
+              key={index}
+              onMouseEnter={() => handleHover(level, index)}  
+              className={`${index === selectedIndexes[level] ? "selected" : ""} ${index === selectedIndex && selectedLevel === level ? "currentSelected" : ""}`}
+            >
+              {item.name}
+            </li>
           )
         })}
       </ul>
