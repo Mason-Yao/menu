@@ -27,7 +27,7 @@ const Menu = ({ list, setSelectedIndex, setSelectedLevel, setMaxLevel, setListLe
   }, [selectedLevel, selectedIndex])
 
   return (
-    <div style={{display:"flex"}}>
+    <>
       <ul>
         {list.map((item, index) => {
           return (
@@ -54,7 +54,7 @@ const Menu = ({ list, setSelectedIndex, setSelectedLevel, setMaxLevel, setListLe
           setListLength={setListLength}
           setSelectedIndexes={setSelectedIndexes}
         />}
-    </div>
+    </>
   )
 }
 
